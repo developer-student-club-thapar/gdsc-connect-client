@@ -17,13 +17,34 @@ export function Button(props: ButtonComponentProps) {
     variant === BUTTON_VARIANT.TERTIARY ||
     variant === BUTTON_VARIANT.DANGER;
 
-  const classes = "";
+  let classes = "";
+  switch (variant) {
+    case BUTTON_VARIANT.PRIMARY:
+      classes = "bg-blue-500 hover:bg-blue-600 text-white";
+      break;
+    case BUTTON_VARIANT.SECONDARY:
+      classes =
+        "border border-blue-400 bg-slate-600 hover:bg-slate-500 hover:bg-opacity-20 bg-opacity-20 text-blue-400";
+      break;
+    case BUTTON_VARIANT.TERTIARY:
+      classes = "text-white hover:bg-slate-400 hover:bg-opacity-20 ";
+      break;
+    case BUTTON_VARIANT.PRIMARY_DANGER:
+      classes = "bg-red-500 hover:bg-red-700 text-white";
+      break;
+    case BUTTON_VARIANT.DANGER:
+      classes =
+        "border border-red-500 bg-transparent hover:bg-red-700 text-red-500 hover:border-red-700 hover:text-white";
+      break;
+  }
 
   return (
     <button
       className={
-        "p-4 rounded-full flex flex-row items-center justify-center m-2" +
-        classes
+        "p-3 px-16 rounded-full inline-flex h-min w-full flex-row items-center justify-center m-2 box-border text-lg " +
+        classes +
+        " " +
+        className
       }
       disabled={disabled}
       {...(!disabled && { onClick })}
