@@ -1,6 +1,7 @@
 import { Button } from "~/components/common/Button/Button";
 import { BUTTON_VARIANT } from "~/components/common/Button/types";
 import Sidenav from "~/components/Sidenav/";
+import Tags from "~/components/tags/Tags";
 
 export default function Index() {
   return (
@@ -14,6 +15,11 @@ export default function Index() {
           <Button variant={BUTTON_VARIANT.TERTIARY}>Test</Button>
           <Button variant={BUTTON_VARIANT.PRIMARY_DANGER}>Test</Button>
           <Button variant={BUTTON_VARIANT.DANGER}>Test</Button>
+        </div>
+        <div className="flex flex-row">
+          <Tags>Devops</Tags>
+          <Tags>Frontend</Tags>
+          <Tags>Backend</Tags>
         </div>
       </div>
     </div>
