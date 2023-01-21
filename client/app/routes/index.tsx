@@ -1,7 +1,7 @@
 import { Button } from "~/components/common/Button/Button";
 import { BUTTON_VARIANT } from "~/components/common/Button/types";
 import Sidenav from "~/components/Sidenav/";
-import Tags from "~/components/tags/Tags";
+import Tags from "~/components/common/Tags/Tags";
 
 export default function Index() {
   return (
