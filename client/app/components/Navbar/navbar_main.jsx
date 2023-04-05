@@ -55,9 +55,9 @@ function navbar_main() {
                     <img
                       src="https://avatars.githubusercontent.com/u/68650149?v=4"
                       alt="profile"
-                      className="w-8 h-8 rounded-full"
+                      className="w-8 h-8 rounded-full border-2 border-solid"
                     />
-                    <span className="px-2 font-normal text-black text-sm">
+                    <span className="px-1 font-normal text-black text-sm">
                       Me
                     </span>
                     <RiArrowDropDownLine size={20} color="black" />
