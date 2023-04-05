@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import styles from "./styles/app.css";
 
 export const meta: MetaFunction = () => ({
@@ -26,11 +27,13 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-[#050505] text-gray-200">
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+      <body className="">
+        <ChakraProvider>
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </ChakraProvider>
       </body>
     </html>
   );

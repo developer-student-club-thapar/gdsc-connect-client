@@ -3,11 +3,12 @@ import { BUTTON_VARIANT } from "~/components/common/Button/types";
 import Sidenav from "~/components/Sidenav/";
 import Tags from "~/components/common/Tags/Tags";
 import Pfp from "~/components/Pfp/Pfp";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
     <div className=" flex flex-row w-screen overflow-hidden h-screen">
-      <Sidenav />
+      {/* <Sidenav />
       <div>
         <h1 className="text-xl font-bold p-2 mt-2">Testing Buttons:</h1>
         <div className="flex flex-row">
@@ -30,6 +31,17 @@ export default function Index() {
           <Pfp imageSrc="https://wallpapercave.com/uwp/uwp2633526.png" />
           <Pfp />
         </div>
+      </div> */}
+      <div>
+        <h1 className="text-3xl font-bold p-2 mt-2">
+          Welcome to the home page!
+        </h1>
+        <Link to="/auth/login">
+          <Button variant={BUTTON_VARIANT.PRIMARY}>Login</Button>
+        </Link>
+        <Link to="/auth/register">
+          <Button variant={BUTTON_VARIANT.PRIMARY}>Register</Button>
+        </Link>
       </div>
     </div>
   );
