@@ -2,6 +2,8 @@ import React from "react";
 import { GoLocation } from "react-icons/go";
 import { FaSuitcase } from "react-icons/fa";
 import { BsFolderFill, BsDot } from "react-icons/bs";
+import DetailTags from "../../components/common/Tags/DetailTags";
+import ContactCard from "../../components/ContactCard/contactcard";
 
 function DetailedCard() {
   // glowing dot
@@ -83,7 +85,7 @@ function DetailedCard() {
                 {/* straight line */}
                 <div className="border-b-2 border-gray-300 pt-10"></div>
 
-                <h1 className="pt-10 font-bold">Job Description</h1>
+                <h1 className="pt-10 font-bold">Job Overview</h1>
                 <p className=" text-gray-500 pt-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   vitae nisl vitae nisl luctus aliquam. Sed vitae nisl vitae
@@ -123,9 +125,48 @@ function DetailedCard() {
                   <BsDot size={20} className={glowingDotStyle} />
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 </p>
+                <h1 className="pt-10 font-bold">Requirements</h1>
+                <p className=" text-gray-500 pt-5 flex items-center">
+                  <BsDot size={20} className={glowingDotStyle} />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                </p>
+                <p className=" text-gray-500 pt-5 flex items-center">
+                  <BsDot size={20} className={glowingDotStyle} />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                </p>
+                <p className=" text-gray-500 pt-5 flex items-center">
+                  <BsDot size={20} className={glowingDotStyle} />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                </p>
+                <p className=" text-gray-500 pt-5 flex items-center">
+                  <BsDot size={20} className={glowingDotStyle} />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                </p>
+                <p className=" text-gray-500 pt-5 flex items-center">
+                  <BsDot size={20} className={glowingDotStyle} />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                </p>
+                <div className="flex flex-wrap pt-10">
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                  <DetailTags text="Full Time" />
+                </div>
               </div>
             </div>
-            <div className="w-[45%] pl-5 pr-10 pt-6">test</div>
+            <div className="w-[45%] pl-5 pr-10 pt-6">
+              <div className="px-8">
+                <ContactCard />
+              </div>
+            </div>
           </div>
         </div>
       </div>
