@@ -17,7 +17,7 @@ function navbar_main() {
   const liStyles = "pr-2 py-2";
   return (
     <>
-      <div className="bg-white px-2">
+      <div className="bg-white px-4">
         <ul className="flex flex-wrap items-center justify-between">
           <li className={liStyles}>
             <div className="flex items-center">
@@ -66,9 +66,9 @@ function navbar_main() {
                 className="flex items-center justify-center outline-none "
               />
               <MenuList>
-                <MenuItem>1</MenuItem>
-                <MenuItem>2</MenuItem>
-                <MenuItem>3</MenuItem>
+                <MenuItem>Settings</MenuItem>
+                <MenuItem>Applied Jobs</MenuItem>
+                <MenuItem>Logout</MenuItem>
               </MenuList>
             </Menu>
           </li>

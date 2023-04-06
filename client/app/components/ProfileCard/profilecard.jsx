@@ -1,10 +1,11 @@
 import React from "react";
-import { BiEdit, BiShoppingBag } from "react-icons/bi";
+import { BiEdit } from "react-icons/bi";
+import { IoBagOutline } from "react-icons/io5";
 
 function profilecard() {
   return (
     <>
-      <div className="border-solid rounded-lg border-[1px] border-gray-400 ">
+      <div className="border-solid rounded-lg border-[2px] border-bordergray transition duration-500 ease-in-out transform hover:shadow-2xl">
         <div className="flex flex-wrap px-2 pt-2">
           <div className="ml-auto">
             <BiEdit size={20} />
@@ -27,10 +28,10 @@ function profilecard() {
             <p>Upcoming Software Developer</p>
           </div>
         </div>
-        <div className="border-t-gray-400 border-t-[1px] py-2">
+        <div className="border-t-bordergray hover:bg-gray-100 rounded-b-lg border-t-2 py-2">
           <div className="flex items-center justify-center">
-            <BiShoppingBag />
-            <p className="text-sm text-gray-500 pl-2">Applied Jobs</p>
+            <IoBagOutline />
+            <p className="text-sm text-gray-500 pl-2 ">Applied Jobs</p>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 function Search({ placeholder, children }) {
   return (
-    <div className="border-solid border-[1px] border-gray-500 rounded-lg">
+    <div className="border-solid border-2 border-bordergray rounded-lg">
       <div className="flex items-center p-2 ">
         <div className="pr-2">{children}</div>
         <input

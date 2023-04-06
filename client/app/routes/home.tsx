@@ -5,9 +5,9 @@ import NavbarMain from "../components/Navbar/navbar_main";
 function home() {
   return (
     <>
-      <div className="h-screen bg-[#f9f9f9]">
+      <div className="h-screen w-screen bg-[#f9f9f9] overflow-scroll">
         <NavbarMain />
-        <div className="p-4 ">
+        <div>
           <Outlet />
         </div>
       </div>

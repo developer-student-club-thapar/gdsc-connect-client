@@ -13,8 +13,8 @@ import Checkbox1 from "../common/Checkbox1";
 function filters() {
   return (
     <>
-      <div className="border-solid rounded-lg border-[1px] border-gray-400 ">
-        <Accordion allowMultiple defaultIndex={0}>
+      <div className="border-solid rounded-lg border-2 border-bordergray transition duration-500 ease-in-out transform hover:shadow-2xl">
+        <Accordion allowMultiple defaultIndex={0} allowToggle={true}>
           <AccordionItem border="none">
             <h2>
               <AccordionButton>
@@ -30,8 +30,7 @@ function filters() {
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
-        <Accordion defaultIndex={0}>
-          {" "}
+        <Accordion defaultIndex={0} allowToggle={true}>
           <AccordionItem border="none">
             <h2>
               <AccordionButton>
@@ -48,7 +47,7 @@ function filters() {
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
-        <Accordion defaultIndex={0}>
+        <Accordion defaultIndex={0} allowToggle={true}>
           <AccordionItem border="none">
             <h2>
               <AccordionButton>
