@@ -4,6 +4,8 @@ import Search from "../common/Search";
 import { AiOutlineSearch } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import SearchButton from "../common/Button/SearchButton";
+import { Link } from "react-router-dom";
+import { redirect } from "@remix-run/node";
 import {
   Menu,
   MenuButton,
@@ -24,7 +26,9 @@ function navbar_main() {
               <div className="pr-2">
                 <FaConnectdevelop size={30} />
               </div>
-              <p className="font-bold text-xl">GDSC Connect</p>
+              <Link to="/home/dashboard">
+                <p className="font-bold text-xl">GDSC Connect</p>
+              </Link>
             </div>
           </li>
           <div className="flex flex-wrap items-center">

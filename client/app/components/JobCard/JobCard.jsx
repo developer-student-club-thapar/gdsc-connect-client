@@ -1,7 +1,18 @@
 import { React, useState } from "react";
 import { BsDot, BsBookmark, BsBookmarkFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-function JobCard() {
+function JobCard({
+  img,
+  title,
+  company,
+  location,
+  Tags,
+  applicants,
+  description,
+  days,
+  identity,
+}) {
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   const tagStyle =
@@ -19,49 +30,38 @@ function JobCard() {
       <div className="px-3 pb-5 ">
         <div className="border-solid rounded-lg border-2 border-bordergray transition duration-500 ease-in-out transform hover:shadow-2xl">
           <div className="p-4">
-            <div className="flex items-start flex-none">
-              <div className="w-24 h-24 rounded-lg border-2 border-solid flex flex-none items-center bg-white">
-                <img
-                  src={iconSource}
-                  alt="profile"
-                  className="w-20 h-20 m-auto"
-                />
-              </div>
-              <div className="px-2 pl-4">
-                <p className="font-semibold">Web Developement Intern</p>
-                <div className="flex items-center text-sm text-gray-500 font-semibold pt-2">
-                  <p>Google</p>
-                  <BsDot />
-                  <p>India</p>
+            <Link to={`/home/detailedcard/${identity}`}>
+              <div className="flex items-start flex-none">
+                <div className="w-24 h-24 rounded-lg border-2 border-solid flex flex-none items-center bg-white">
+                  <img src={img} alt="profile" className="w-20 h-20 m-auto" />
+                </div>
+                <div className="px-2 pl-4">
+                  <p className="font-semibold">{title}</p>
+                  <div className="flex items-center text-sm text-gray-500 font-semibold pt-2">
+                    <p>{company}</p>
+                    <BsDot />
+                    <p>{location}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex justify-start pt-4">
-              <div className={tagStyle}>
-                <p>Full-time</p>
+              <div className="flex justify-start pt-4">
+                {Tags.map((tag) => (
+                  <div className={tagStyle}>
+                    <p>{tag}</p>
+                  </div>
+                ))}
               </div>
-              <div className={tagStyle}>
-                <p>Onsite</p>
+              <div>
+                <div className="text-sm text-gray-500 pt-4 ">
+                  <p className="line-clamp-2">{description}</p>
+                </div>
               </div>
-              <div className={tagStyle}>
-                <p>Internship</p>
-              </div>
-            </div>
-            <div>
-              <div className="text-sm text-gray-500 pt-4 ">
-                <p className="line-clamp-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam auctor, nisl nec ultricies lacinia, nisl nisl tincidunt
-                  nisl, nec aliquet nisl nisl eu nisl. Sed tincidunt, nisl nec
-                  ultricies lacinia, nisl nisl tincidunt
-                </p>
-              </div>
-            </div>
+            </Link>
             <div className="flex items-center pt-4">
               <div className="flex items-center">
-                <p className="text-sm text-gray-500">2 days ago</p>
+                <p className="text-sm text-gray-500">3 days ago</p>
                 <BsDot className="text-gray-500" />
-                <p className="text-sm text-black">719 Applicants</p>
+                <p className="text-sm text-black">{applicants} Applicants</p>
               </div>
               <div className="ml-auto">
                 <div onClick={onBookmarkHandler}>
