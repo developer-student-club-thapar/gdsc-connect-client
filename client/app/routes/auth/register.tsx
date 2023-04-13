@@ -71,7 +71,7 @@ function register() {
                         Gender
                       </p>
                       <div className="flex justify-evenly">
-                        <div>
+                        <div className="flex items-center">
                           <label className="text-black pl-2 text-sm capitalize pr-2">
                             M
                           </label>
@@ -81,7 +81,7 @@ function register() {
                             className="bg-[#f2f6fc] outline-none active:outline-none text-black  font-semibold text-sm"
                           />
                         </div>
-                        <div>
+                        <div className="flex items-center">
                           <label className="text-black pl-2 text-sm capitalize pr-2">
                             F
                           </label>

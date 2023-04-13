@@ -3,6 +3,8 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { useState } from "react";
 import Password from "../../../components/Settings/PasswordChange";
+import General from "../../../components/Settings/General";
+import Socials from "../../../components/Settings/Socials";
 
 function Settings() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -35,16 +37,20 @@ function Settings() {
         <div className="pt-4 px-4">
           <Tabs onChange={(index) => setTabIndex(index)}>
             <TabList>
-              <Tab>Password</Tab>
               <Tab>My Details</Tab>
+              <Tab>Password</Tab>
               <Tab>Socials</Tab>
             </TabList>
             <TabPanels p="2rem">
               <TabPanel>
+                <General />
+              </TabPanel>
+              <TabPanel>
                 <Password />
               </TabPanel>
-              <TabPanel>The Primary Colors</TabPanel>
-              <TabPanel>Red, yellow and blue.</TabPanel>
+              <TabPanel>
+                <Socials />
+              </TabPanel>
             </TabPanels>
           </Tabs>
         </div>

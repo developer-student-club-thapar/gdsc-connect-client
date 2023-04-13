@@ -70,7 +70,9 @@ function navbar_main() {
                 className="flex items-center justify-center outline-none "
               />
               <MenuList>
-                <MenuItem>Settings</MenuItem>
+                <Link to="/home/user/settings">
+                  <MenuItem>Settings</MenuItem>
+                </Link>
                 <MenuItem>Applied Jobs</MenuItem>
                 <MenuItem>Logout</MenuItem>
               </MenuList>

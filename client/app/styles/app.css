@@ -748,6 +748,10 @@ video {
   width: 1.25rem;
 }
 
+.w-\[10em\] {
+  width: 10em;
+}
+
 .flex-none {
   flex: none;
 }
